@@ -1,0 +1,6 @@
+[package]
+name = "whiles_example_with_a_for"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
