@@ -16,10 +16,10 @@ fn display_options_text() {
     println!("2. Fahrenheit to Celsius");
 }
 
-fn display_result_text(result: f32, mode: &ConverterMode) {
+fn display_result_text(result: &f32, mode: &ConverterMode) {
     let target_temp_alias = match mode {
         ConverterMode::CelsiusToFahrenheit => "F",
-        ConverterMode::FahrenheitToCelsius => "C",
+        ConverterMode::FahrenheitToCelsius => "ºC",
     };
 
     println!();
@@ -99,6 +99,6 @@ fn main() {
         let temp = handle_temp_input();
         let result = temp_converter(&mode, temp);
 
-        display_result_text(result, &mode);
+        display_result_text(&result, &mode);
     }
 }
